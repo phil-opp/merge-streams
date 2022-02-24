@@ -1,10 +1,9 @@
 //! Composable asynchronous iteration.
 
-use crate::Merge;
-
+use crate::MergeStreams;
 use futures_core::Stream;
 
-/// Extend `Stream` with concurrency methods.
+/// Extend `Stream` with a `merge` method.
 pub trait StreamExt: Stream {
     /// Combines multiple streams into a single stream of all their outputs.
     ///
@@ -16,7 +15,7 @@ pub trait StreamExt: Stream {
     ///
     /// ```
     /// use futures::stream::StreamExt;
-    /// use futures_concurrency::prelude::*;
+    /// use merge_streams::StreamExt as _;
     /// use futures_lite::future::block_on;
     /// use futures_lite::stream;
     ///
@@ -46,7 +45,7 @@ pub trait StreamExt: Stream {
 
 impl<S> StreamExt for S where S: Stream {}
 
-/// Conversion into a `Stream`.
+/// Helper trait for converting values into a `Stream`.
 ///
 /// By implementing `IntoStream` for a type, you define how it will be
 /// converted to an iterator. This is common for types which describe a

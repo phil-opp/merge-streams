@@ -1,12 +1,12 @@
 use crate::stream::IntoStream;
 use crate::utils;
-use crate::Merge as MergeTrait;
+use crate::MergeStreams;
 
 use futures_core::Stream;
 use std::pin::Pin;
 use std::task::{Context, Poll};
 
-impl<T, S0, S1> MergeTrait for (S0, S1)
+impl<T, S0, S1> MergeStreams for (S0, S1)
 where
     S0: IntoStream<Item = T>,
     S1: IntoStream<Item = T>,
@@ -86,7 +86,7 @@ where
 
 // TODO: automate this!
 
-impl<T, S0, S1, S2> MergeTrait for (S0, S1, S2)
+impl<T, S0, S1, S2> MergeStreams for (S0, S1, S2)
 where
     S0: IntoStream<Item = T>,
     S1: IntoStream<Item = T>,

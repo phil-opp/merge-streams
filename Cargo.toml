@@ -1,26 +1,20 @@
 [package]
-name = "futures-concurrency"
-version = "2.0.0"
+name = "merge-streams"
+version = "0.1.0"
 license = "MIT OR Apache-2.0"
-repository = "https://github.com/yoshuawuyts/futures-concurrency"
-documentation = "https://docs.rs/futures-concurrency"
-description = "Concurrency extensions for Future"
+documentation = "https://docs.rs/merge-streams"
+description = "Merge multiple streams into one"
 readme = "README.md"
-edition = "2018"
+edition = "2021"
 keywords = []
 categories = []
 authors = [
     "Yoshua Wuyts <yoshuawuyts@gmail.com>"
 ]
 
-[features]
-unstable = []
-
 [dependencies]
 futures-core = "0.3.16"
 pin-project = "1.0.8"
-thread_local = "1.1.3"
-async-trait = "0.1.52"
 
 [dev-dependencies]
 futures-lite = "1.12.0"

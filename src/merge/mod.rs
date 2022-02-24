@@ -13,7 +13,7 @@ pub(crate) mod vec;
 /// # Examples
 ///
 /// ```
-/// use futures_concurrency::prelude::*;
+/// use merge_streams::MergeStreams;
 /// use futures_lite::prelude::*;
 /// use futures_lite::{future::block_on, stream};
 ///
@@ -31,7 +31,7 @@ pub(crate) mod vec;
 ///     })
 /// }
 /// ```
-pub trait Merge {
+pub trait MergeStreams {
     /// The resulting output type.
     type Item;
 
