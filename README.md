@@ -3,7 +3,7 @@
 Merge multiple streams into one.
 
 Based on Yoshua Wuyts's [`futures-concurrency`](https://docs.rs/futures-concurrency/latest) crate and the corresponding [_Futures Concurrency III_](https://blog.yoshuawuyts.com/futures-concurrency-3/)
-post.
+post. Since the `futures-concurrency` crate now supports stable Rust too, there is no reason to this crate instead anymore.
 
 # Example
 Merge multiple streams to handle values as soon as they're ready, without ever dropping a single value:
