@@ -1,4 +1,4 @@
-use core::{slice::SliceIndex, pin::Pin};
+use core::{pin::Pin, slice::SliceIndex};
 
 /// Returns a pinned mutable reference to an element or subslice depending on the
 /// type of index (see `get`) or `None` if the index is out of bounds.

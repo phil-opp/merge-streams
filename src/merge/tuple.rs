@@ -270,7 +270,7 @@ mod tests {
             let a = stream::once(1);
             let b = stream::once(2);
             let c = stream::once(3);
-            let d= stream::once(4);
+            let d = stream::once(4);
             let s = (a, b, c, d).merge();
 
             let mut counter = 0;
